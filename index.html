@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Catch the Chicken</title>
+    <link rel="stylesheet" href="assets/style.css">  
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="main-container" class="unselectable">
+        <div id="overlay-container" class="flex-centered">
+            <div id="opacity-filter"></div>
+            <div id="countdown-timer" class="flex-centered"></div>
+            <!-- <div id="restart-menu"></div> -->
+            <div id="start-menu" class="menu">
+                <div class="top-bar"></div>
+                <div id="title-text" class="title-text flex-centered">Catch the Chicken</div>
+                <div id="center-text" class="center-text flex-centered"><u>Instructions:</u>Catch the chicken before<br>the timer expires<br>(Click to grab)</div>
+                <div id="start-button" class="flex-centered button">Let's Go!</div>
+            </div>
+            <div id="lose-menu" class="menu">
+                <div class="top-bar"></div>
+                <div class="title-text flex-centered unselectable">You Lost!</div>
+                <div class="center-text flex-centered">The chicken outran you :(</div>
+                <div id="lose-button" class="flex-centered button">Try Again</div>
+            </div>
+            <div id="win-menu" class="menu">
+                <div class="top-bar"></div>
+                <div class="title-text flex-centered">You Won!</div>
+                <div id="win-message" class="center-text flex-centered">You grabbed the chicken!</div>
+                <div id="win-button" class="flex-centered button">Play Again</div>
+            </div>
+        </div>
+        <div id="game-screen" class="flex-centered">
+            <!-- <div id="test-bar"></div> -->
+            <div id="game-title">Catch the Chicken</div>
+            <div id="game-space">
+                <div id="character" class="flex-centered">
+                    <img id="chicken" src="assets/img/chicken.png">
+                </div>
+            </div>
+            <!-- <div id="game-stats">
+                <div id="score" class="game-stat flex-centered">Score: 0</div>
+                <div id="timer" class="game-stat flex-centered">1:00</div>
+                <div id="highscore" class="game-stat flex-centered">High Score: -</div>
+            </div> -->
+            <div id="timer" class="flex-centered">0:15</div>
+            <div id="restart-button"></div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="assets/app.js"></script>
+</html>

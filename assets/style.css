@@ -1,0 +1,237 @@
+/* ------ DEFAULT --------------------------------------- */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: var(--backgroundColor);
+    font-family: Courier;
+    color: var(--blackText);
+}
+
+/* ------ ASSETS --------------------------------------- */
+
+.flex-centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+:root {
+    --backgroundColor: beige;
+    --menuColor: rgb(178, 178, 160);
+    --whiteText: rgb(231, 231, 231);
+    --blackText: rgb(24, 24, 24);
+    --buttonRed: rgb(150, 45, 45);
+    --buttonHover: rgb(194, 60, 60);
+}
+
+*.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+ }
+
+/* ------ CONTAINERS --------------------------------------- */
+
+#main-container {
+    width: 100%;
+    min-width: 900px;
+    height: 100%;
+    min-height: 680px;
+    background-color: var(--backgroundColor);
+    position: relative;
+}
+
+#overlay-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 5;
+}
+
+
+/* ------ OVERLAYS --------------------------------------- */
+
+#opacity-filter {
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+    opacity: 50%;
+    position: absolute;
+    z-index: 4;
+}
+
+#countdown-timer {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    font-size: 50pt;
+    color: var(--whiteText);
+    z-index: 5;
+    /* cursor: default; */
+    text-shadow: rgb(134, 134, 134) 1px 0 10px;
+}
+
+#lose-menu {
+    /* position: absolute;
+    z-index: 6; */
+    display: none;
+}
+
+#win-menu {
+    display: none;
+}
+
+
+
+/* ------ START --------------------------------------- */
+
+
+.menu {
+    width: 300px;
+    height: 350px;
+    background-color: var(--backgroundColor);
+    border-radius: 30px;
+    box-shadow: 10px 10px 5px gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 6;
+    cursor: default;
+}
+
+.top-bar {
+    width: 85%;
+    height: 15%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    font-size: xx-large;
+}
+
+.title-text {
+    width: 100%;
+    height: 15%;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.center-text {
+    width: 100%;
+    height: 35%;
+    font-style: italic;
+    text-align: center;
+}
+
+.button {
+    width: 70%;
+    height: 17%;
+    background-color: var(--buttonRed);
+    color: var(--whiteText);
+    margin-top: 5%;
+    border-radius: 30px;
+    box-shadow: 4px 4px 2px gray;
+    transition-duration: 0.2s;
+}
+
+.button:hover {
+    background-color: var(--buttonHover);
+    color: var(--whiteText);
+    margin-top: 4%;
+    box-shadow: 4px 10px 2px gray;
+    cursor: pointer;
+}
+
+/* ------ GAME --------------------------------------- */
+
+#game-screen {
+    width: 100%;
+    height: 100%;
+    background-color: var(--backgroundColor);
+    position: absolute;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: default;
+}
+
+#game-title {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 30pt;
+}
+
+#game-space {
+    width: 70%;
+    max-width: 900px;
+    height: 65%;
+    min-height: 480px;
+    border-radius: 20px;
+    background-color: var(--whiteText);
+    border-width: 2px;
+    border-style: solid;
+    /* cursor: url('img/smallnet.png') 20 20, grab; */
+    cursor: grab;
+}
+
+#game-space:active {
+    cursor: grabbing;
+}
+
+/* #game-space:hover {
+    cursor: url('img/net.png') 2 2, 
+    default;
+} */
+
+#timer {
+    width: 20%;
+    height: 10%;
+    font-size: 25pt;
+}
+
+#character {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition-duration: 0.2s;
+    /* cursor: grabbing; */
+}
+
+#chicken {
+    width: 50%;
+    aspect-ratio: auto;
+    display: none;
+}
+
+#chicken:hover {
+    /* cursor: grab; */
+}
+
+/* #character:hover {
+    background-color: red;
+} */
+
+
+/* #game-stats {
+    width: 55%;
+    height: 10%;
+    background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.game-stat {
+    width: 170px;
+    height: 100%;
+    font-size: 25pt;
+} */
